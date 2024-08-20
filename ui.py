@@ -92,6 +92,7 @@ prediction_array = prediction_array + [runs, wickets, overs, runs_in_prev_5,wick
 prediction_array = np.array([prediction_array])
 predict = model.predict(prediction_array)
 
+
 if st.button('Predict Score'):
     my_prediction = int(round(predict[0]))
     x=f'PREDICTED MATCH SCORE : {my_prediction-5} to {my_prediction+5}' 
